@@ -18,9 +18,35 @@
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
         }
-        h3 {
+        h2, h3 {
             color: #34495e;
             margin-top: 30px;
+            position: relative;
+        }
+        .heading-link {
+            opacity: 0;
+            text-decoration: none;
+            margin-left: 8px;
+            color: #3498db;
+            transition: opacity 0.2s;
+        }
+        h2:hover .heading-link,
+        h3:hover .heading-link {
+            opacity: 1;
+        }
+        .heading-link:hover {
+            color: #2980b9;
+        }
+        .copy-tooltip {
+            position: fixed;
+            background: #2c3e50;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
         }
         img {
             max-width: 100%;
@@ -46,14 +72,14 @@
     <h1><a href="/">Segment34 watchfaces</a> - FAQ</h1>
 
     <div class="section">
-        <h3>How do I change the settings? Where are the settings?</h3>
+        <h3 id="1.1.0">1.1.0 How do I change the settings? Where are the settings?<a href="#1.1.0" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
         <p>The settings is only available through the Garmin Connect IQ app. Go to the page for the watch face in Connect IQ and look for the big blue Settings button.</p>
         <p>You can also find it if you go to <em>Device -> My Watch Faces -> Segment34 MkII / MAX</em></p>
         <p>The settings can not be changed on the watch itself.</p>
     </div>
 
     <div class="section">
-        <h3>Do I need to buy you a coffee to unlock features of the watch face?</h3>
+        <h3 id="1.1.1">1.1.1 Do I need to buy you a coffee to unlock features of the watch face?<a href="#1.1.1" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
         <p><strong>No, everything is included for free</strong>. Donating money / buying coffee through ko-fi does not unlock anything as there is nothing to unlock, everything is already included. You are however very welcome to support me anyway if you like the watch face:</p>
         <div class="ko-fi-button">
             <a href="https://ko-fi.com/M4M51A1RGV"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="ko-fi"></a>
@@ -61,12 +87,20 @@
     </div>
 
     <div class="section">
-        <h3>How does the custom themes work?</h3>
+        <h3 id="1.2.0">1.2.0 How does the custom themes work?<a href="#1.2.0" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
         <p>Custom themes are best created with the <a href="https://ludw.github.io/designer">Theme designer</a>. When it looks they way you want just copy the string of color codes at the bottom and enter them into the "Custom colors" field in settings for the watchface. Make sure to also select "Custom colors" as the theme.</p>
     </div>
 
     <div class="section">
-        <h3>What are that field called in settings? What is that number?</h3>
+        <h3 id="1.2.1">1.2.1 I tried the custom theme and now it's all red green blue and says THEME ERROR, why?<a href="#1.2.1" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
+        <p>If the watchface looks like this and/or says THEME ERROR:</p>
+        <img src="theme_error.png" alt="Watchface in all the colors with a bright red background and green clock" />
+        <p>Then you have an error with the custom theme field. Use the <a href="https://ludw.github.io/designer">Theme designer</a> to create the string of color codes to put in this field and make sure you have copy/pasted without any spaces on either side.</p>
+    </div>
+
+
+    <div class="section">
+        <h3 id="1.3.0">1.3.0 What are that field called in settings? What is that number?<a href="#1.3.0" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
         <p>Most fields can be configures in settings what data they should display.<br />This picture explains what everything is called:</p>
         <img src="explainer.png" alt="Field explanation diagram">
         <p>For watches with an AMOLED screen you have two more fields shown in the Always On Display (if activated). These are called "Always On (below clock)" and "Second Always On Field (to the right)".</p>
@@ -74,36 +108,65 @@
     </div>
 
     <div class="section">
-        <h3>Can I press values to open widgets on the watch?</h3>
+        <h3 id="1.3.1">1.3.1 Can I press values to open widgets on the watch?<a href="#1.3.1" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
         <p>Yes, but you have to configure what to open in settings (it's towards the bottom on the settings screen). There are 5 areas that when pressed can open something:</p>
         <img src="press_to_open.png" alt="Press to open areas diagram">
     </div>
 
     <div class="section">
-        <h2>Disappearing or hidden fields</h2>
+        <h2 id="2.0.0">2.0.0 Disappearing or hidden fields<a href="#2.0.0" class="heading-link" aria-label="Copy link to section">🔗</a></h2>
 
-        <h3>Why are seconds disappearing?</h3>
+        <h3 id="2.1.0">2.1.0 Why are seconds disappearing?<a href="#2.1.0" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
         <p>If you have a watch with a Memory In Pixel (MIP) display, seconds can be displayed continuously. However, doing so uses a bit more battery so I have disabled it by default. If you want to always see seconds at the cost of slightly less battery life you can enable "Show Seconds in Inactive mode (MIP Screens only)" in settings.</p>
         <p>If you have a AMOLED screen you can enable the Always On Display to always see the hours and minutes, but updating the screen every second is not possible (this is a limitation from Garmins side, not with this watch face).</p>
 
-        <h3>I added the value X, and it doesn't show up, why?</h3>
+        <h3 id="2.2.0">2.2.0 I added the value X, and it doesn't show up, why?<a href="#2.2.0" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
         <p>If a specific value does not show up (you see an empty spot instead) it's most likely because your watch does not have that value available. As a watch face developer there is nothing I can do to make it available.</p>
 
-        <h3>Why is weather (or sunset/sunrise) disappearing after a while? Why is the top part of the screen empty?</h3>
+        <h3 id="2.3.0">2.3.0 Why is weather (or sunset/sunrise) disappearing after a while? Why is the top part of the screen empty?<a href="#2.3.0" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
         <p>The weather fields, including also sunset and sunrise, need weather data to be able to display something. This data comes from Garmins Weather API which in turn fetches the data over bluetooth from your phone running the Garmin Connect app. If the weather data doesn't show up, make sure your watch is connected to your phone via bluetooth. You can also try restarting the watch if you can't get it to work.</p>
     </div>
 
     <div class="section">
-        <h2>Commonly requested features</h2>
+        <h2 id="3.0.0">3.0.0 Commonly requested features<a href="#3.0.0" class="heading-link" aria-label="Copy link to section">🔗</a></h2>
 
-        <h3>Can you translate the watch to &lt;language&gt;?</h3>
+        <h3 id="3.1.0">3.1.0 Can you translate the watch to &lt;language&gt;?<a href="#3.1.0" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
         <p>I might do that in the future, but it's a lot of work, especially for languages that requires more letters than A-Z. The fonts I use all have hand drawn letters in each font size. This means adding just a few Èážȳ Łëṱțẹrš is a lot of work. I have it on my list but no promises for when this might happen.</p>
 
-        <h3>Will you add support for Open Weather API?</h3>
+        <h3 id="3.2.0">3.2.0 Will you add support for Open Weather API?<a href="#3.2.0" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
         <p>Not short term at least. I don't want to add the complexity having multiple weather data sources would mean. I've also seen that other watch faces with support for it have received quite a lot of negative reviews from users that can't figure out how to get a API token which makes me a bit less keen on working on this...</p>
 
-        <h3>Can you make the font larger / configurable?</h3>
+        <h3 id="3.3.0">3.3.0 Can you make the font larger / configurable?<a href="#3.3.0" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
         <p>You can check out my other watchface Segment34 MAX, it is basically the same but with larger text.</p>
     </div>
+
+    <div class="copy-tooltip">Link copied!</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tooltip = document.querySelector('.copy-tooltip');
+            const headingLinks = document.querySelectorAll('.heading-link');
+
+            headingLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const url = window.location.origin + window.location.pathname + this.getAttribute('href');
+                    
+                    // Copy to clipboard
+                    navigator.clipboard.writeText(url).then(() => {
+                        // Show tooltip
+                        tooltip.style.left = e.pageX + 'px';
+                        tooltip.style.top = (e.pageY - 30) + 'px';
+                        tooltip.style.opacity = '1';
+                        
+                        // Hide tooltip after 2 seconds
+                        setTimeout(() => {
+                            tooltip.style.opacity = '0';
+                        }, 2000);
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html> 
