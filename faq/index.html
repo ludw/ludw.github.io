@@ -76,13 +76,21 @@
         <p>The settings is only available through the Garmin Connect IQ app. Go to the page for the watch face in Connect IQ and look for the big blue Settings button.</p>
         <p>You can also find it if you go to <em>Device -> My Watch Faces -> Segment34 MkII / MAX</em></p>
         <p>The settings can not be changed on the watch itself.</p>
-    </div>
-
-    <div class="section">
-        <h3 id="1.1.1">1.1.1 Do I need to buy you a coffee to unlock features of the watch face?<a href="#1.1.1" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
+        
+	<h3 id="1.1.1">1.1.1 Do I need to buy you a coffee to unlock features of the watch face?<a href="#1.1.1" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
         <p><strong>No, everything is included for free</strong>. Donating money / buying coffee through ko-fi does not unlock anything as there is nothing to unlock, everything is already included. You are however very welcome to support me anyway if you like the watch face:</p>
         <div class="ko-fi-button">
             <a href="https://ko-fi.com/M4M51A1RGV"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="ko-fi"></a>
+        </div>
+        
+	<h3 id="1.1.2">1.1.2 Troubleshooting installation/unistallation issues<a href="#1.1.2" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
+	<p>The installation and uninstallation is all handled by Garmin, please don't email with questions about it.</p>
+	<p>Some things you can try:
+	  <ul>
+		  <li>Restart the Connect IQ app and also the watch.</li>
+		  <li>Make sure your watch is up to date with the latest firmware.</li>
+		  <li>For uninstallation, try switching to another watchface first.</li>
+	</p>
         </div>
     </div>
 
@@ -134,10 +142,10 @@
         <p>I might do that in the future, but it's a lot of work, especially for languages that requires more letters than A-Z. The fonts I use all have hand drawn letters in each font size. This means adding just a few Èážȳ Łëṱțẹrš is a lot of work. I have it on my list but no promises for when this might happen.</p>
 
         <h3 id="3.2.0">3.2.0 Will you add support for Open Weather API?<a href="#3.2.0" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
-        <p>Not short term at least. I don't want to add the complexity having multiple weather data sources would mean. I've also seen that other watch faces with support for it have received quite a lot of negative reviews from users that can't figure out how to get a API token which makes me a bit less keen on working on this...</p>
+	<p>Yes, the Segment34 mk3 has OWM support!</p>
 
         <h3 id="3.3.0">3.3.0 Can you make the font larger / configurable?<a href="#3.3.0" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
-        <p>You can check out my other watchface Segment34 MAX, it is basically the same but with larger text.</p>
+	<p>Yes, the Segment34 mk3 has configurable font size.</p>
     </div>
 
     <div class="section">
@@ -145,6 +153,20 @@
 
         <h3 id="4.1.0">4.1.0 How do I make the CGM fields work?<a href="#4.1.0" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
         <p>These fields get data from <a href="https://apps.garmin.com/en-US/apps/034a3784-b27f-4f2a-a109-67413a5f4f83">CGM Connect Widget</a>, a separate app you must install and configure on your watch. Make sure you read the full description for CGM Connect Widget and set it up properly. You can also look at the documentation at <a href="https://cgmconnect.exparrot.de/">https://cgmconnect.exparrot.de/</a></p>
+
+    </div>
+    
+    <div class="section">
+        <h2 id="5.0.0">5.0.0 Open Weather Map<a href="#5.0.0" class="heading-link" aria-label="Copy link to section">🔗</a></h2>
+
+        <h3 id="4.1.0">5.1.0 How to setup OWM<a href="#5.1.0" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
+	<p>If you want to user open weather map instead of the Garmin weather data:</p>
+	<ol>
+		<li>Make sure you have the Segment34 Mk3 version installed</li>
+		<li>Go to https://openweathermap.org/ and create a free API key. There should be a button on the startpage labled "Get API Key". You must create an account and your API key should be emailed to you shortly</li>
+		<li>Go into the settings for the watchface in the Connect IQ app on your phone, change the Weather provider to "OpenWeatherMap". Copy paste your API key to the OWM API key setting.</p>
+		<li>Wait. It will take around 5 minutes before the data updates on the watchface. If your API key is just created it can take longer before it becomes active.</li>
+	</ol>
 
     </div>
 
