@@ -66,6 +66,13 @@
         .section {
             margin-bottom: 40px;
         }
+        dt {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        dd {
+            margin: 0 0 10px 20px;
+        }
     </style>
 </head>
 <body>
@@ -177,6 +184,34 @@
 	<p>The Open Weather Map integration will by default use the location from Garmins weather, if you want to you can enter a different location in settings to override this.</p>
 	<p>To confirm what City you are seeing weather for you can add "n" to the custom weather format string</p>
 
+    </div>
+
+    <div class="section">
+        <h2 id="6.0.0">6.0.0 Permissions<a href="#6.0.0" class="heading-link" aria-label="Copy link to section">🔗</a></h2>
+
+        <h3 id="6.1.0">6.1.0 What permissions does Segment34 Mk3 need and why?<a href="#6.1.0" class="heading-link" aria-label="Copy link to section">🔗</a></h3>
+
+	<dl>
+		<dt>Background</dt>
+		<dd>Allows the watchface to wake up periodically in the background to fetch fresh weather data. Without this, weather would only update when you interact with the watch.</dd>
+
+		<dt>Communications</dt>
+		<dd>Enables the watchface to make HTTP requests to OpenWeatherMap and Open-Meteo APIs to retrieve current conditions, forecasts, and weather alerts.</dd>
+
+		<dt>ComplicationSubscriber</dt>
+		<dd>Reads data from Garmin's complication sources: stress level, body battery, altitude, recovery time, training status, calendar events, pulse oximetry, weekly run/bike distances, and continuous glucose monitor (CGM) age.</dd>
+
+		<dt>Positioning</dt>
+		<dd>Accesses the device's GPS location. This is used to fetch weather for your current location, calculate sunrise/sunset and civil twilight times, and display coordinates and MGRS grid references.</dd>
+
+		<dt>SensorHistory</dt>
+		<dd>Retrieves up to 2 hours of historical sensor data (heart rate, stress, body battery, elevation, pressure, temperature, oxygen saturation) for rendering histogram and line graphs on the watchface.</dd>
+
+		<dt>UserProfile</dt>
+		<dd>Reads your profile data: age, weight, height, and gender for calorie calculations; wake/sleep times for automatic day/night theme switching; VO2 max and resting heart rate for display; and activity history for weekly/monthly distance tracking.</dd>
+	</dl>
+
+	<p>All of the source code is publicly available at <a href="https://github.com/ludw/Segment34mk3">github.com/ludw/Segment34mk3</a>. You're welcome to inspect it yourself — there are no hidden data transmissions, analytics, or tracking. The only outbound network calls go directly to the weather APIs you configure, and no personal data is ever sent off-device.</p>
     </div>
 
     <div class="copy-tooltip">Link copied!</div>
